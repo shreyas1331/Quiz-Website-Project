@@ -1,0 +1,158 @@
+body,
+html {
+	width: 100%;
+	height: 150%;
+}
+body {
+	background: #F1F1F1;
+}
+@font-face {
+	font-family: Roboto;
+	src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.woff2")
+			format("woff2"),
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.woff")
+			format("woff"),
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565097/Roboto-Regular.ttf")
+			format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* The Collapsing Parallax */
+.collapsing-parallax {
+	position: fixed;
+	height: 350px;
+	width: 100%;
+	background: url(http://designdrizzle.com/wp-content/uploads/featured_code.jpg)
+	center center no-repeat;
+	background-color: rgb(33,14,61);
+	background-size: cover;
+	z-index: 99;
+}
+/* Navigation Button w/ Animation */
+.menu-trigger{
+	cursor: pointer;
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	width: 26px;
+	height: 20px;
+	-webkit-transition: 0.35s ease all;
+   -moz-transition: 0.35s ease all;
+   -o-transition: 0.35s ease all;
+   transition: 0.35s ease all;
+}
+.menu-trigger > .bar{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 2.3px;
+	background-color: white;
+	-webkit-transition: 0.36s ease-out all;
+   -moz-transition: 0.36s ease-out all;
+   -o-transition: 0.36s ease-out all;
+   transition: 0.36s ease-out all;
+}
+	.menu-trigger > .bar:first-child{
+		top: 0;
+	}
+	.menu-trigger > .bar:nth-child(2){
+		top: 8px;
+	}
+	.menu-trigger > .bar:nth-child(3){
+		top: 16px;
+	}
+.menu-trigger.active{
+	transform: rotate(180deg);
+}
+.menu-trigger.active > .bar:first-child{
+	   transform-origin: 60% bottom;
+		transform: rotate(40deg) scaleX(0.7) translateX(8px);
+}
+.menu-trigger.active > .bar:nth-child(3){
+	   transform-origin: 60% top;
+		transform: rotate(-40deg) scaleX(0.7) translateX(8px);
+}
+
+/* body content */
+header.collapsing-parallax + .site-main{
+	padding-top: 428px;
+}
+.site-main .inner{
+	text-align: center;
+}
+.row{}
+.row::after, .row::before {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+.cardview{
+	display: inline-block;
+	text-align: left;
+	position: relative;
+	width:28%;
+	max-height: 350px;
+	margin: 0 15px 20px 15px;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.18),
+		0px 4px 14px 0px rgba(0, 0, 0, 0.15);
+}
+.cardview img{
+		display: block;
+		position: relative;
+		background-position: center center;
+		background-size: cover;
+		height: 180px;
+		width: 100%;
+		top: 0;
+	}
+.cardview .content{
+	position: relative;
+	padding: 15px 20px;
+}
+.cardview h1{
+	font-size: 19px;
+	font-weight: 500;
+	margin: 0 0 12px 0;
+}
+.cardview p{
+	font-size: 14px;
+	margin: 0 15px 15px 0;
+}
+.cardview a{
+	font-size: 16px;
+	position: relative;
+	text-decoration:none;
+	color: #0a0a14;
+	text-transform: uppercase;
+	padding: 10px 6px;
+	-webkit-transition: 0.3s ease-in-out background;
+   -moz-transition: 0.3s ease-in-out background;
+   -o-transition: 0.3s ease-in-out background;
+   transition: 0.3s ease-in-out background;
+}
+.cardview a:hover{
+	background: rgba(0,0,0,0.04);
+	border-radius: 6px;
+}
+@media screen and (max-width: 830px){
+	.cardview{
+		width: 44%;
+	}
+}
+@media screen and (max-width: 590px){
+	.cardview{
+		width: 80%;
+	}
+	@media screen and (max-width: 530px){
+	.cardview{
+		width: 85%;
+		margin: 15px auto;
+	}
+}
+
+
+
+

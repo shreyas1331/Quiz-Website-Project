@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML QUESTIONS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="quest.css">
+        <script language="JavaScript" type="text/javascript">
+            function check(){
+                var c=0;
+                var q1=document.quiz.q1.value;
+                var q2=document.quiz.q2.value;
+                var q3=document.quiz.q3.value;
+                var q4=document.quiz.q4.value;
+                var q5=document.quiz.q5.value;
+                var result=document.getElementById('result');
+                if (q1 == "hyper") {c++}
+                if (q2 == "main") {c++}
+                if (q3 == "bold") {c++}
+                if (q4 == "dennis") {c++}
+                if (q5 == "c") {c++}
+                 
+                result.textContent=`FINAL SCORE ${c}/5`
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div id="top" class="inner-box">
+                <h2 >HTML</h2>
+                <form name="quiz" id="quiz">
+                    <div class="quest" id="q1">
+                        <h3>Q No. 1 :- HTML stands for :</h3> <br>
+                        <p><input type="radio" name="q1" value="platform"> HighText Machine Language</p>
+                        <p><input type="radio" name="q1" value="machine">HyperText and links Markup Language</p>
+                        <p><input type="radio" name="q1" value="hyper">  HyperText Markup Language</p>
+                        <p><input type="radio" name="q1" value="none"> None of the above</p>
+                    </div>
+                    <div class="quest" id="q2" >
+                        <h3>Q No. 2 :- The correct sequence of HTML tags for starting a webpage :</h3> <br>
+                        <p><input type="radio" name="q2" value="start"> Head, Title, HTML, body</p>
+                        <p><input type="radio" name="q2" value="system"> HTML, Body, Title, Head</p>
+                        <p><input type="radio" name="q2" value="main"> HTML, Head, Title, Body</p>
+                        <p><input type="radio" name="q2" value="program"> HTML, Title, Head, Body</p>
+                    </div>
+                    <div class="quest" id="q3">
+                        <h3>Q No. 3 :- Which of the following element is responsible for making the text bold in HTML ?</h3> <br>
+                        <p><input type="radio" name="q3" value="float">  &lt;pre&gt;</p>
+                        <p><input type="radio" name="q3" value="real"> &lt;a&gt;</p>
+                        <p><input type="radio" name="q3" value="bold"> &lt;b&gt;</p>
+                        <p><input type="radio" name="q3" value="double"> &lt;br&gt;</p>
+                    </div>
+                    <div class="quest" id="q4">
+                        <h3>Q No. 4 :- Which of the following tag is used for inserting the largest heading in HTML ?</h3> <br>
+                        <p><input type="radio" name="q4" value="dennis"> &lt;h3&gt;</p>
+                        <p><input type="radio" name="q4" value="james"> &lt;h1&gt;</p>
+                        <p><input type="radio" name="q4" value="martin"> &lt;h4&gt;</p>
+                        <p><input type="radio" name="q4" value="bjarne"> &lt;h6&gt;</p>
+                    </div>
+                    <div class="quest" >
+                        <h3> Q No. 5 :- Which of the following tag is used to insert a line-break in HTML ?</h3> <br>
+                        <p><input type="radio" name="q5" value="a"> &lt;br&gt;</p>
+                        <p><input type="radio" name="q5" value="b"> &lt;a&gt;</p>
+                        <p><input type="radio" name="q5" value="c"> &lt;pre&gt;</p>
+                        <p><input type="radio" name="q5" value="d"> &lt;b&gt;</p>
+                    </div>
+        
+                    <input type="button" class="btn" value="SUBMIT" onclick="check()">
+                </form>
+                <div class="result">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+        
+    <div id="navigation">
+
+		<p><b>Quiz Navigation</b></p>
+
+		<a href="#top"><div><span>1</span></div></a>
+		<a href="#q1"><div><span>2</span></div></a>
+		<a href="#q2"><div><span>3</span></div></a>
+		<a href="#q3"><div><span>4</span></div></a>
+		<a href="#q4"><div><span>5</span></div></a>
+		
+    </div>
+   
+	
+    
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a> 
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>QUIZ WEBSITE</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			THANKS FOR ATTEMPTING THE QUIZ.
+		</div>
+	</div>
+</div>
+	
+        
+    </body>
+</html>

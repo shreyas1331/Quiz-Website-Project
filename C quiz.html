@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>C-Quiz</title>
+        <link rel="stylesheet" href="quiz1.css">
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Montserrat">
+        <script language="JavaScript" type="text/javascript">
+            function check(){
+                var c=0;
+                var q1=document.quiz.q1.value;
+                var q2=document.quiz.q2.value;
+                var q3=document.quiz.q3.value;
+                var q4=document.quiz.q4.value;
+                var q5=document.quiz.q5.value;
+                var result=document.getElementById('result');
+                if (q1 == "machine") {c++}
+                if (q2 == "main") {c++}
+                if (q3 == "real") {c++}
+                if (q4 == "dennis") {c++}
+                if (q5 == "c") {c++}
+                 
+                result.textContent=`FINAL SCORE ${c}/5`
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="inner-box">
+                <a href="feedback.html">Feedback</a>
+                <h2>C-Language</h2>
+                <form name="quiz" id="quiz">
+                    <div class="quest">
+                        <h3>Q.1 Which of the following is true about C?</h3> <br>
+                        <p><input type="radio" name="q1" value="platform"> Platform Independent</p>
+                        <p><input type="radio" name="q1" value="machine"> Machine Independent</p>
+                        <p><input type="radio" name="q1" value="high"> High level Language</p>
+                        <p><input type="radio" name="q1" value="none"> None of the above</p>
+                    </div>
+                    <div class="quest">
+                        <h3>Q.2 What is the only function all C program must contain?</h3> <br>
+                        <p><input type="radio" name="q2" value="start"> start()</p>
+                        <p><input type="radio" name="q2" value="system"> system()</p>
+                        <p><input type="radio" name="q2" value="main"> main()</p>
+                        <p><input type="radio" name="q2" value="program"> program()</p>
+                    </div>
+                    <div class="quest">
+                        <h3>Q.3 Which of the following is not a correct variable type?</h3> <br>
+                        <p><input type="radio" name="q3" value="float"> float</p>
+                        <p><input type="radio" name="q3" value="real"> real</p>
+                        <p><input type="radio" name="q3" value="int"> int</p>
+                        <p><input type="radio" name="q3" value="double"> double</p>
+                    </div>
+                    <div class="quest">
+                        <h3>Q.4 Who is known as founder of C language?</h3> <br>
+                        <p><input type="radio" name="q4" value="dennis"> Dennis Ritchie</p>
+                        <p><input type="radio" name="q4" value="james"> James Gosling</p>
+                        <p><input type="radio" name="q4" value="martin"> Martin Richard</p>
+                        <p><input type="radio" name="q4" value="bjarne"> Bjarne Stroustrup</p>
+                    </div>
+                    <div class="quest">
+                        <h3>Q.5 Which of the following is correct comment?</h3> <br>
+                        <p><input type="radio" name="q5" value="a"> */comment*/</p>
+                        <p><input type="radio" name="q5" value="b"> **comment**</p>
+                        <p><input type="radio" name="q5" value="c"> /*comment*/</p>
+                        <p><input type="radio" name="q5" value="d"> {comment}</p>
+                    </div>
+        
+                    <input type="button" class="btn" value="SUBMIT" onclick="check()">
+                </form>
+                <div class="result">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html> 
